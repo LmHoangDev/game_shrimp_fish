@@ -1,9 +1,10 @@
 import React from "react";
 
-export default function XucXac() {
+export default function XucXac(props) {
+  const { xucXacItem } = props;
   return (
-    <div>
-      <img style={{ width: 50 }} src="./img/BaiTapGameBauCua/Bau.png" alt="" />
-    </div>
+    <React.Fragment>
+      <img style={{ width: 50 }} src={xucXacItem.hinhAnh} alt="" />
+    </React.Fragment>
   );
 }

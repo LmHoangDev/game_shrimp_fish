@@ -1,7 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 export default function DiemCuoc() {
-  let { tongDiem } = useSelector((state) => state.BaiTapBauCuaReducer.tongDiem);
+  let tongDiem = useSelector((state) => state.BaiTapBauCuaReducer.tongDiem);
+  const dispatch = useDispatch();
   return (
     <div>
       <h3
@@ -16,8 +17,7 @@ export default function DiemCuoc() {
           style={{ fontSize: "20px", borderRadius: "5%" }}
           className="p-3 text-white bg-danger"
         >
-          Tiền thưởng:{" "}
-          <span className="text-warning">{tongDiem.toLocaleString()}$</span>
+          Tiền thưởng: <span className="text-warning">{tongDiem}$</span>
         </span>
       </div>
 
@@ -25,9 +25,13 @@ export default function DiemCuoc() {
         <button
           style={{ fontSize: "15px", borderRadius: "5%", border: "none" }}
           className="p-2 text-white bg-success"
+          onClick={() => {
+            dispatch({
+              type: "PLAY_AGAIN",
+            });
+          }}
         >
-          {" "}
-          Chơi lại{" "}
+          Play Again
         </button>
       </div>
     </div>
