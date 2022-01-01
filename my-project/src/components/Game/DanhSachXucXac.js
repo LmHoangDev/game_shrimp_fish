@@ -1,4 +1,5 @@
 import React from "react";
+import XucXac from "./XucXac";
 // import { head } from "lodash";
 
 export default function DanhSachXucXac() {
@@ -10,27 +11,13 @@ export default function DanhSachXucXac() {
       >
         <div className="row">
           <div className="col-12 text-center" style={{ marginTop: "75px" }}>
-            <img
-              style={{ width: 50 }}
-              src="./img/BaiTapGameBauCua/Bau.png"
-              alt=""
-            />
+            <XucXac />
           </div>
           <div className="col-6 text-right mt-5">
-            <img
-              className="mr-3"
-              style={{ width: 50 }}
-              src="./img/BaiTapGameBauCua/Bau.png"
-              alt=""
-            />
+            <XucXac />
           </div>
-          <div className="col-6 mt-5">
-            <img
-              className=""
-              style={{ width: 50 }}
-              src="./img/BaiTapGameBauCua/Bau.png"
-              alt=""
-            />
+          <div className="col-6 text-left mt-5">
+            <XucXac />
           </div>
         </div>
       </div>
