@@ -25,9 +25,11 @@ export default (state = initialState, action) => {
       );
       console.log(index);
       if (index !== -1) {
-        if (action.tangGiam && state.tongDiem > 0) {
-          danhSachCuocUpdate[index].diemCuoc += 100;
-          state.tongDiem -= 100;
+        if (action.tangGiam) {
+          if (state.tongDiem > 0) {
+            danhSachCuocUpdate[index].diemCuoc += 100;
+            state.tongDiem -= 100;
+          }
         } else {
           if (danhSachCuocUpdate[index].diemCuoc > 0) {
             danhSachCuocUpdate[index].diemCuoc -= 100;
